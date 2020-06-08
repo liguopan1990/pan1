@@ -5,7 +5,6 @@ import requests
 def dowmloadPic(html, keyword):
     pic_url = re.findall('"objURL":"(.*?)",', html, re.S)
     i = 1
-    print('find keyword:' + keyword)
     for each in pic_url:
         print('downloading' + str(i) + str(each))
         try:
@@ -23,7 +22,6 @@ def dowmloadPic(html, keyword):
 
 if __name__ == '__main__':
     word = input("Input key word: ")
-    url = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=' + word + '&ct=201326592&v=flip'
+    url = 'http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word=' + str(word) + '&ct=201326592&v=flip'
     result = requests.get(url)
-    print(result.text)
     dowmloadPic(result.text, word)
