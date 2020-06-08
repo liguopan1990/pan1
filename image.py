@@ -13,7 +13,7 @@ def dowmloadPic(html, keyword):
             print('error')
             continue
 
-        dir = '/images/' + keyword + '_' + str(i) + '.jpg'
+        dir = '/images/' + str(keyword) + '_' + str(i) + '.jpg'
         fp = open(dir, 'wb')
         fp.write(pic.content)
         fp.close()
