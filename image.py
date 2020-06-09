@@ -9,7 +9,7 @@ def dowmloadPic(html, keyword):
     print('find keyword:' + keyword)
     path = r'/root/app/images'
     os.chdir(path)
-	if i<100:
+    if i<100:
         for each in pic_url:
             print('downloading' + str(i) + str(each))
             try:
